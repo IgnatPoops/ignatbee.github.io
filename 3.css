@@ -1,0 +1,40 @@
+/* navigation.css */
+nav {
+    background: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    background: var(--hover-bg);
+    transform: translateY(-2px);
+}
+
+.nav-links .current {
+    color: var(--accent-color);
+    background: var(--hover-bg);
+    font-weight: bold;
+}

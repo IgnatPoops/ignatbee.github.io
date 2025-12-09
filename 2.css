@@ -1,0 +1,121 @@
+/* header.css */
+.honeycomb-header {
+    background: var(--header-bg);
+    color: #333;
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.honeycomb-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: 
+        radial-gradient(circle at 30% 30%, #333 2px, transparent 3px),
+        radial-gradient(circle at 70% 30%, #333 2px, transparent 3px),
+        radial-gradient(circle at 50% 60%, #333 2px, transparent 3px);
+    background-size: 100px 86px;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    margin: 0 auto 1.5rem;
+    background: #ffcc66;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #664400;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover img {
+    transform: scale(1.05);
+}
+
+.honeycomb-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.honeycomb-header p {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    opacity: 0.9;
+}
+
+.profession {
+    font-weight: bold;
+}
+
+.slogan {
+    font-style: italic;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Переключатель темы */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle::before {
+    content: '🌙';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #FFD700;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.dark-theme .theme-toggle::before {
+    content: '☀️';
+    transform: translateX(30px);
+    background: #FFA500;
+}
